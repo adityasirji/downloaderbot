@@ -237,10 +237,11 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("**Enter resolution📥**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
-
-    editable = await editable.edit("**Downloaded By📥**")
+    
+    editable = await editable.edit("**Downloaded By**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text0 = input0.text
+
 
     editable4 = await m.reply_text(
         "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
@@ -259,7 +260,6 @@ async def account_login(bot: Client, m: Message):
         count = 1
     else:
         count = int(raw_text)
-
     try:
         for i in range(arg, len(links)):
 
@@ -451,13 +451,13 @@ async def account_login(bot: Client, m: Message):
 
             try:
                 if "unknown" in out:
-                    res = "NA"
+                    res = "aditya"
                 else:
                     res = list(out.keys())[list(out.values()).index(ytf)]
 
                 name = f'{str(count).zfill(3)}) {name1} {res}'
             except Exception:
-                res = "NA"
+                res = "aditya"
 
             # if "youtu" in url:
             # if ytf == f"'bestvideo[height<={raw_text2}][ext=mp4]+bestaudio[ext=m4a]'" or "acecwply" in url:
