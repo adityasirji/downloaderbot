@@ -30,7 +30,7 @@ from get_video_info import get_video_attributes, get_video_thumb
 
 API_ID = 26363547
 API_HASH = "cc5817e859e43a003585ed79569208da"
-BOT_TOKEN = "6638502025:AAHkbKrFjk4safoHpFzLARc9LOMz4Xx5-sw"
+BOT_TOKEN = "6539127466:AAGSYIehy_Pfx1V2tEbKWPli2b1QpX-K_MI"
 AUTH_USERS = 6004318404,1318247204,1511103739
 sudo_users = [-4066470338,-4029190640]
 bot = Client(
@@ -488,8 +488,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch :-** {raw_text0}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n\n**Batch :-** {raw_text0}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}aditya.mp4\n\n**Batch :-** {raw_text0}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}aditya.pdf\n\n**Batch :-** {raw_text0}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
