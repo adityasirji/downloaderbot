@@ -28,11 +28,11 @@ import os
 import io
 from get_video_info import get_video_attributes, get_video_thumb
 
-API_ID = 26363547
-API_HASH = "cc5817e859e43a003585ed79569208da"
-BOT_TOKEN = "6411753887:AAHEPLy23rG9Hyhe61ppGfQ8LCE6bkyKuAg"
-AUTH_USERS = 6004318404,1318247204,1511103739
-sudo_users = [-4066470338,-4029190640]
+API_ID = 26368249
+API_HASH = "ac2db262d5eb7ce0efc0162404c8d172"
+BOT_TOKEN = "6504918956:AAH-47Xg995EYliDmhQuzfG0JA65QLWF5Zg"
+AUTH_USERS = 5684410709
+sudo_users = [5684410709]
 bot = Client(
     "bot",
     bot_token=BOT_TOKEN,
@@ -162,7 +162,7 @@ async def account_login(bot: Client, m: Message):
         continue
       else:
         start_time = time.time()
-        cc = f'{str(count).zfill(2)}. {name} - {vid_format}pAditya\n\n**Batch »** {mm}\n\n**Dowloaded By »** {raw_text0}'
+        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch »** {mm}\n\n**Dowloaded By »** {raw_text0}'
         try:
           duration, width, height = get_video_attributes(path)
         except:
@@ -237,8 +237,8 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("**Enter resolution📥**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
-    
-    editable = await editable.edit("**Downloaded By**")
+
+    editable = await editable.edit("**Downloaded By📥**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text9 = input9.text
 
@@ -259,7 +259,7 @@ async def account_login(bot: Client, m: Message):
         count = 1
     else:
         count = int(raw_text)
-        
+
     try:
         for i in range(arg, len(links)):
 
@@ -451,13 +451,13 @@ async def account_login(bot: Client, m: Message):
 
             try:
                 if "unknown" in out:
-                    res = "aditya"
+                    res = "NA"
                 else:
                     res = list(out.keys())[list(out.values()).index(ytf)]
 
                 name = f'{str(count).zfill(3)}) {name1} {res}'
             except Exception:
-                res = "aditya"
+                res = "NA"
 
             # if "youtu" in url:
             # if ytf == f"'bestvideo[height<={raw_text2}][ext=mp4]+bestaudio[ext=m4a]'" or "acecwply" in url:
@@ -488,8 +488,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}aditya.mp4\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text9}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}aditya.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text9}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text9}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text9}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
