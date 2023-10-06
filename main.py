@@ -259,6 +259,7 @@ async def account_login(bot: Client, m: Message):
         count = 1
     else:
         count = int(raw_text)
+        
     try:
         for i in range(arg, len(links)):
 
