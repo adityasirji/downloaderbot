@@ -148,7 +148,7 @@ async def account_login(bot: Client, m: Message):
       await exec(command_to_exec)
       prog = await m.reply_text(Show)
       if ".pdf" in url:
-          cc2 = f'{str(count).zfill(2)}. {name}\n\n**Batch »** {mm}\n\n**Dowloaded By »** {raw_text0}'
+          cc2 = f'{str(count).zfill(2)}. {name}\n\n**Batch »** {mm}Aditya\n\n**Dowloaded By »** {raw_text0}'
           await bot.send_document(document = name+".pdf",caption=cc2)
           os.remove(f"{name}")
           count+=1
@@ -162,11 +162,11 @@ async def account_login(bot: Client, m: Message):
         continue
       else:
         start_time = time.time()
-        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch »** {mm}\n\n**Dowloaded By »** {raw_text0}'
+        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch »** {mm}Aditya\n\n**Dowloaded By »** {raw_text0}'
         try:
           duration, width, height = get_video_attributes(path)
         except:
-            duration = width = height = 0
+            duration = width = height = 1
             pass
         try:
           await bot.send_video(
@@ -240,7 +240,7 @@ async def account_login(bot: Client, m: Message):
     
     editable = await editable.edit("**Downloaded By**")
     input0: Message = await bot.listen(editable.chat.id)
-    raw_text0 = input0.text
+    raw_text3 = input3.text
 
 
     editable4 = await m.reply_text(
@@ -488,8 +488,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}aditya.mp4\n\n**Batch :-** {raw_text0}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}aditya.pdf\n\n**Batch :-** {raw_text0}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}aditya.mp4\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text3}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}aditya.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text3}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
