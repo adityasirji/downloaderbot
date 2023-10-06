@@ -30,7 +30,7 @@ from get_video_info import get_video_attributes, get_video_thumb
 
 API_ID = 26363547
 API_HASH = "cc5817e859e43a003585ed79569208da"
-BOT_TOKEN = ""
+BOT_TOKEN = "6411753887:AAHEPLy23rG9Hyhe61ppGfQ8LCE6bkyKuAg"
 AUTH_USERS = 6004318404,1318247204,1511103739
 sudo_users = [-4066470338,-4029190640]
 bot = Client(
@@ -166,7 +166,7 @@ async def account_login(bot: Client, m: Message):
         try:
           duration, width, height = get_video_attributes(path)
         except:
-            duration = width = height = 1
+            duration = width = height = 0
             pass
         try:
           await bot.send_video(
