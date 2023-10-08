@@ -242,9 +242,7 @@ async def account_login(bot: Client, m: Message):
     input0: Message = await bot.listen(editable.chat.id)
     raw_text9 = input9.text
 
-    editable4 = await m.reply_text(
-        "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
-    )
+    editable4 = await m.reply_text("Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
 
