@@ -245,23 +245,19 @@ async def account_login(bot: Client, m: Message):
     editable4 = await m.reply_text("Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
-
     thumb = input6.text
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
         thumb == "no"
-
     if raw_text == '0':
         count = 1
     else:
         count = int(raw_text)
-
-    try:
+     try:
         for i in range(arg, len(links)):
-
-            url = links[i][1]
+              url = links[i][1]
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*","").replace("download",".pdf").replace(".","").strip()
             if ".pdf" in url or "pdf" in name1:
                 name = f"{str(count).zfill(3)}) {name1.replace('pdf', '')}.pdf"
