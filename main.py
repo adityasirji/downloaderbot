@@ -239,8 +239,8 @@ async def account_login(bot: Client, m: Message):
     raw_text2 = input2.text
 
     editable = await editable.edit("**Downloaded By📥**")
-    input01: Message = await bot.listen(editable.chat.id)
-    raw_text01 = input01.text
+    input3: Message = await bot.listen(editable.chat.id)
+    raw_text3 = input3.text
 
     editable4 = await m.reply_text(
         "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
@@ -488,8 +488,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}A͜͡d͜͡i͜͡t͜͡y͜͡a͜͡\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {mm}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}A͜͡d͜͡i͜͡t͜͡y͜͡a͜͡.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {mm}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}A͜͡d͜͡i͜͡t͜͡y͜͡a͜͡\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text3}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}A͜͡d͜͡i͜͡t͜͡y͜͡a͜͡.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text3}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
