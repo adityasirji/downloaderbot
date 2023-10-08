@@ -162,7 +162,7 @@ async def account_login(bot: Client, m: Message):
         continue
       else:
         start_time = time.time()
-        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch »** {mm}\n\n**Dowloaded By »** {raw_text0}'
+        cc = f'{str(count).zfill(2)}. {name} - {vid_format}pA͜͡d͜͡i͜͡t͜͡y͜͡a͜͡\n\n**Batch »** {mm}\n\n**Dowloaded By »** {raw_text0}'
         try:
           duration, width, height = get_video_attributes(path)
         except:
@@ -240,7 +240,7 @@ async def account_login(bot: Client, m: Message):
 
     editable = await editable.edit("**Downloaded By📥**")
     input0: Message = await bot.listen(editable.chat.id)
-    raw_text1 = input1.text
+    mm = input01.text
 
     editable4 = await m.reply_text(
         "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
@@ -488,8 +488,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch :-** {raw_text0}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n\n**Batch :-** {raw_text0}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}A͜͡d͜͡i͜͡t͜͡y͜͡a͜͡\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {mm}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}A͜͡d͜͡i͜͡t͜͡y͜͡a͜͡.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {mm}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
