@@ -233,31 +233,37 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("**Enter Title📥**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text0 = input0.text
-    
-    editable = await editable.edit("**Downloaded By📥**")
-    input0: Message = await bot.listen(editable.chat.id)
-    raw_text9 = input9.text
 
     await m.reply_text("**Enter resolution📥**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
 
-    editable4 = await m.reply_text("Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**")
+    editable = await editable.edit("**Downloaded By📥**")
+    input0: Message = await bot.listen(editable.chat.id)
+    raw_text1 = input1.text
+
+    editable4 = await m.reply_text(
+        "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
+    )
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
+
     thumb = input6.text
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
         thumb == "no"
+
     if raw_text == '0':
         count = 1
     else:
         count = int(raw_text)
-     try:
+
+    try:
         for i in range(arg, len(links)):
-              url = links[i][1]
+
+            url = links[i][1]
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*","").replace("download",".pdf").replace(".","").strip()
             if ".pdf" in url or "pdf" in name1:
                 name = f"{str(count).zfill(3)}) {name1.replace('pdf', '')}.pdf"
@@ -482,8 +488,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading 📥:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text9}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n\n**Batch :-** {raw_text0}\n\n**Dowloaded By »** {raw_text9}'
+                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n\n**Batch :-** {raw_text0}'
+                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n\n**Batch :-** {raw_text0}'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
