@@ -239,8 +239,8 @@ async def account_login(bot: Client, m: Message):
     raw_text2 = input2.text
 
     editable = await editable.edit("**Downloaded By📥**")
-    input0: Message = await bot.listen(editable.chat.id)
-    mm = input01.text
+    input01: Message = await bot.listen(editable.chat.id)
+    raw_text01 = input01.text
 
     editable4 = await m.reply_text(
         "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
